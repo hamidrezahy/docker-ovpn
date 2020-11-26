@@ -37,7 +37,7 @@ RUN chmod 755 /usr/local/sbin/*
 VOLUME /etc/openvpn
 
 # Expose Container Ports to Host
-EXPOSE 443/tcp 1194/udp
+EXPOSE 1397/tcp 1297/udp
 
 # Allow run time config of options
 ENV RADIUS_KEY=testing123
