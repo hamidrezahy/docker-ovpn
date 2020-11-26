@@ -56,19 +56,19 @@ mute 10
 EOF
 
 cat >radius1397.conf <<EOF
-NAS-Identifier=OpenVpn
+NAS-Identifier=$NAS_ID
 Service-Type=5
 Framed-Protocol=1
 NAS-Port-Type=5
-NAS-IP-Address=ovpn
+NAS-IP-Address=$NAS_IP
 OpenVPNConfig=/etc/openvpn/tcp1397.conf
 subnet=255.255.0.0
 overwriteccfiles=true
 nonfatalaccounting=true
 server
 {
-    acctport=1813
-    authport=1812
+    acctport=$RADIUS_ACCT_PORT
+    authport=$RADIUS_AUTH_PORT
     name=$RADIUS_HOST
     retry=3
     wait=3
@@ -117,19 +117,19 @@ explicit-exit-notify 1
 EOF
 
 cat >radius1297.conf <<EOF
-NAS-Identifier=OpenVpn
+NAS-Identifier=$NAS_ID
 Service-Type=5
 Framed-Protocol=1
 NAS-Port-Type=5
-NAS-IP-Address=ovpn
+NAS-IP-Address=$NAS_IP
 OpenVPNConfig=/etc/openvpn/udp1297.conf
 subnet=255.255.0.0
 overwriteccfiles=true
 nonfatalaccounting=true
 server
 {
-    acctport=1813
-    authport=1812
+    acctport=$RADIUS_ACCT_PORT
+    authport=$RADIUS_AUTH_PORT
     name=$RADIUS_HOST
     retry=3
     wait=3
