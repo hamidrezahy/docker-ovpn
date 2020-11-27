@@ -48,7 +48,8 @@ persist-tun
 status $TCPSTATUS
 plugin /usr/lib/openvpn/radiusplugin.so /etc/openvpn/radius1397.conf
 username-as-common-name
-verify-client-cert none
+#verify-client-cert none
+client-cert-not-required
 log $TCPLOG
 suppress-timestamps
 verb $VERBOSE
@@ -108,7 +109,8 @@ persist-tun
 status $UDPSTATUS
 plugin /usr/lib/openvpn/radiusplugin.so /etc/openvpn/radius1297.conf
 username-as-common-name
-verify-client-cert none
+#verify-client-cert none
+client-cert-not-required
 log $UDPLOG
 suppress-timestamps
 verb $VERBOSE
